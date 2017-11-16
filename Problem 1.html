@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit9Problem1</title>
+</head>
+<body>
+<!--<p>[<a href="Problem1JavaScript.js" onmouseover="highlight()" onmouseout="return_normal()">-->
+<p id ="demo"> Mouser Over</p>
+ Write a
+<strong>JavaScript</strong>  program to highlight the bold words of the following paragraph by
+changing the text color to red, on mouse over.  We have just started this section for the users
+(beginner to intermediate) who want to work with  various <strong>JavaScript</strong> problems
+and write scripts online to test their <strong>javaScript</strong> skill.
+
+<script>
+    //for (var i=0; i<bold_Items.length;i++)
+    var  bold_Items;
+    bold_Items=document.getElementsByTagName('strong');
+    for (var i=0; i<bold_Items.length;i++)
+    {
+   document.getElementsByTagName("strong")[i].onmouseover = function (){ mouseOver() };
+   document.getElementsByTagName("strong")[i].onmouseout=function () { mouseOut() };
+    }
+
+    /*document.getElementsByTagName("strong")[0].onmouseover=function (){ mouseOver()};
+    document.getElementsByTagName("strong")[0].onmouseout=function () { mouseOut() };
+    document.getElementsByTagName("strong")[1].onmouseover=function (){ mouseOver()};
+    document.getElementsByTagName("strong")[1].onmouseout=function () { mouseOut() };
+    document.getElementsByTagName("strong")[2].onmouseover=function (){ mouseOver()};
+    document.getElementsByTagName("strong")[2].onmouseout=function () { mouseOut() };*/
+
+    function mouseOver()
+    {
+        var  bold_Items;
+        bold_Items=document.getElementsByTagName('strong');
+        for (var i=0; i<bold_Items.length;i++)
+        {
+           document.getElementsByTagName("strong")[i].style.color = "red";
+        }
+     /*document.getElementsByTagName("strong")[0].style.color="red";
+    document.getElementsByTagName("strong")[1].style.color="red";
+    document.getElementsByTagName("strong")[2].style.color="red";*/
+    }
+
+    function mouseOut() {
+        var  bold_Items;
+        bold_Items=document.getElementsByTagName('strong');
+        for (var i=0; i<bold_Items.length;i++)
+        {
+            document.getElementsByTagName("strong")[i].style.color = "black";
+        }
+
+    /*document.getElementsByTagName("strong")[0].style.color="black";
+    document.getElementsByTagName("strong")[1].style.color="black";
+    document.getElementsByTagName("strong")[2].style.color="black";*/
+    }
+</script>
+
+</body>
+</html>
