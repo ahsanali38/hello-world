@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/html"><head>
+
+
+    <script>
+        /*var timerid = null;
+        function move()
+        {
+            document.getElementById('robot').style.right =
+                parseInt(document.getElementById('robot').style.right) + 1 + 'px';
+        }
+        window.onload=function()
+        {
+            document.getElementById('robot').onclick=function(){
+
+                if(timerid == null){
+                    timerid = setInterval("move()", 10);
+                    //timerid = setInterval("ve()", 10);
+                }else{
+                    clearInterval(timerid);
+                    timerid = null;
+                }
+            }
+            var button_Stop = document.getElementById('btnStop');
+
+            button_Stop.onclick= reloadPage;
+
+            function reloadPage(){
+                //window.location.reload();
+               CaptionChange();
+                document.getElementById('robot').style.right =
+                    parseInt(document.getElementById('robot').style.right) + 1 + 'px';
+
+            }
+        }
+
+function  CaptionChange() {
+   var CaptionChange=document.getElementById("btnStop");
+   if (CaptionChange.value=="START")
+//document.getElementById("btnStop").value="STOP";
+    //document.getElementById("btnStop").value="STOP";
+        CaptionChange.value='STOP'
+else
+    CaptionChange.value="START"
+
+        };*/
+    </script>
+</head>
+<body>
+<a href="Problem1JavaScript.js"></a>
+<script type="text/javascript" src="Problem1JavaScript.js"></script>
+<img id="robot" src="robot.jpg" width="90px" height="90px" style="position:absolute;right:5px"/>
+
+<div>
+    <!--<button id="btnStart" type="button" style="position:absolute;left:10px;top:190px"/>START</button>-->
+
+  <!--<button id="btnStop" type="button" style="position:absolute;left:10px;top:220px"/>Start</button>-->
+<input id="btnStop" onclick="CaptionChange()" type="button" value="START"
+        style="position:absolute;left:10px;top:220px"/>
+
+
+
+
+</div>
+
+</body>
+</html>
+
